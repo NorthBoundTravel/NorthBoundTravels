@@ -41,18 +41,25 @@
 
   </section>
 
-  <!-- Gallery Section -->
+  <!-- Gallery Carousel Section -->
   <section id="gallery">
     <h3>Photo Gallery</h3>
-    <div class="gallery-grid">
-      <img src="images_gallery1.jpg" alt="Giant's Causeway">
-      <img src="images_gallery2.jpg" alt="Mourne Mountains">
-      <img src="images_gallery3.jpg" alt="Dunluce Castle">
-      <img src="images_gallery4.jpg" alt="Belfast City Hall">
-      <img src="images_gallery5.jpg" alt="Carrick-a-Rede Rope Bridge">
-      <img src="images_gallery6.jpg" alt="Dark Hedges">
+    <div class="carousel-container">
+      <button class="carousel-btn prev" onclick="moveSlide(-1)">&#10094;</button>
+    
+      <div class="carousel-slide">
+        <img src="images_gallery1.jpg" alt="Giant's Causeway">
+        <img src="images_gallery2.jpg" alt="Mourne Mountains">
+        <img src="images_gallery3.jpg" alt="Dunluce Castle">
+        <img src="images_gallery4.jpg" alt="Belfast City Hall">
+        <img src="images_gallery5.jpg" alt="Carrick-a-Rede Rope Bridge">
+        <img src="images_gallery6.jpg" alt="Dark Hedges">
+      </div>
+    
+      <button class="carousel-btn next" onclick="moveSlide(1)">&#10095;</button>
     </div>
   </section>
+
 
   <!-- About Section -->
   <section id="about">
