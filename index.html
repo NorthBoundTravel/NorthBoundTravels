@@ -80,5 +80,27 @@
     <p>&copy; 2025 Northern Ireland Getaways. All rights reserved.</p>
   </footer>
 
+  <script>
+    let currentIndex = 0;
+
+    function moveSlide(direction) {
+      const slide = document.querySelector('.carousel-slide');
+      const images = slide.querySelectorAll('img');
+      const imageWidth = images[0].clientWidth;
+
+      currentIndex += direction;
+
+      // Loop around
+      if (currentIndex < 0) currentIndex = images.length - 1;
+      if (currentIndex >= images.length) currentIndex = 0;
+
+      slide.style.transform = `translateX(-${currentIndex * imageWidth}px)`;
+    }
+
+    // Optional: Auto-slide every 5 seconds
+    setInterval(() => moveSlide(1), 5000);
+  </script>
+
+  
 </body>
 </html>
