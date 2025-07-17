@@ -87,6 +87,22 @@ section h3 {
   transform: scale(1.02);
 }
 
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+.card-link .card {
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-link .card:hover {
+  transform: scale(1.02);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
 /* Carousel Styles */
 #gallery {
   padding: 2rem;
