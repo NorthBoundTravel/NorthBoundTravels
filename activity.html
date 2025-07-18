@@ -37,32 +37,30 @@
     <div class="nav-item"><a href="#contact">Contact</a></div>
   </nav>
 
-  <!-- Activities Section -->
   <section style="padding: 2rem;">
     <h3>Activities Included in This Package</h3>
 
-    <!-- Activity Card -->
-    <div class="activity-box">
-      <img src="images/giants_causeway.jpg" alt="Giant's Causeway">
-      <div class="activity-text">
-        <h4>Giant’s Causeway</h4>
+    <!-- Expandable Activity Box -->
+    <div class="expandable-box">
+      <button class="toggle-button" onclick="toggleBox(this)">▶ Giant’s Causeway</button>
+      <div class="expandable-content">
+        <img src="images/giants-causeway.jpg" alt="Giant's Causeway">
         <p>Marvel at Northern Ireland’s only UNESCO World Heritage Site. Walk among the 40,000 hexagonal basalt columns formed by ancient volcanic activity, and learn about the myth of Finn McCool.</p>
       </div>
     </div>
 
-    <!-- Activity Card -->
-    <div class="activity-box">
-      <img src="images/dunluce-castle.jpg" alt="Dunluce Castle">
-      <div class="activity-text">
-        <h4>Dunluce Castle</h4>
+    <div class="expandable-box">
+      <button class="toggle-button" onclick="toggleBox(this)">▶ Dunluce Castle</button>
+      <div class="expandable-content">
+        <img src="images/dunluce-castle.jpg" alt="Dunluce Castle">
         <p>Perched dramatically on a cliff edge, Dunluce Castle offers breathtaking views and centuries of history. Explore the ruins and imagine life during medieval battles and sieges.</p>
       </div>
     </div>
 
-    <!-- Add more activity-box sections as needed -->
+    <!-- Add more expandable-box elements here -->
 
-  </section>
-
+</section>
+  
   <!-- Back to Package Link -->
   <section style="text-align: center; margin: 2rem;">
     <a href="causeway-coast.html" style="color: var(--blue); font-weight: bold;">← Back to Causeway Package</a>
