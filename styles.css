@@ -60,6 +60,12 @@ nav {
   align-items: center;
 }
 
+.dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
 /* Dropdown content */
 .dropdown-content {
   display: none;
