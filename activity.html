@@ -71,5 +71,21 @@
     <p>&copy; 2025 Northern Ireland Getaways. All rights reserved.</p>
   </footer>
 
+  <script>
+    function toggleBox(button) {
+      const content = button.nextElementSibling;
+      const isOpen = content.style.display === "block";
+
+      // Close all boxes (optional — only one open at a time)
+      document.querySelectorAll('.expandable-content').forEach(el => el.style.display = 'none');
+      document.querySelectorAll('.toggle-button').forEach(btn => btn.innerHTML = btn.innerHTML.replace('▼', '▶'));
+
+      if (!isOpen) {
+        content.style.display = "block";
+        button.innerHTML = button.innerHTML.replace('▶', '▼');
+      }
+    }
+  </script>
+
 </body>
 </html>
