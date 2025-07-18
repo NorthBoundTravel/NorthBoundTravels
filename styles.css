@@ -28,7 +28,7 @@ header h1 {
   font-size: 2rem;
 }
 
-/* Navigation Container */
+/* Ensure nav container is positioned */
 nav {
   background-color: var(--blue);
   display: flex;
@@ -36,62 +36,55 @@ nav {
   align-items: center;
   gap: 1rem;
   padding: 0.5rem 0;
+  position: relative; /* Ensure dropdowns are positioned within this */
+  flex-wrap: wrap;
 }
 
-/* Ensure all nav items behave consistently */
+/* Nav items and dropdowns */
 .nav-item {
+  position: relative;
   display: flex;
   align-items: center;
-  position: relative;
 }
 
-/* Link Styles */
-.nav-item a,
+/* Dropdown button */
 .dropbtn {
+  background-color: transparent;
+  border: none;
   color: var(--white);
-  text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background: none;
-  border: none;
   cursor: pointer;
-  line-height: 1;
   display: flex;
   align-items: center;
 }
 
-/* Hover Effects */
-.nav-item a:hover,
-.dropbtn:hover {
-  color: var(--gold);
-}
-
-/* Dropdown Menu */
+/* Dropdown content */
 .dropdown-content {
   display: none;
   position: absolute;
-  top: 100%;
+  top: 100%; /* aligns it just below the button */
   left: 0;
   background-color: var(--white);
   min-width: 200px;
   box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-  z-index: 1000;
   border-radius: 4px;
+  z-index: 1000;
 }
 
 .dropdown-content a {
-  color: var(--green);
+  display: block;
   padding: 0.75rem 1rem;
   text-decoration: none;
-  display: block;
+  color: var(--green);
 }
 
 .dropdown-content a:hover {
   background-color: var(--gray);
 }
 
-/* Show on hover */
+/* Show dropdown on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
