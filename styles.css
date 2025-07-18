@@ -209,6 +209,46 @@ section h3 {
   right: 10px;
 }
 
+/* Activity Boxes */
+.activity-box {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: var(--gray);
+  border-radius: 12px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  margin: 1.5rem 0;
+  overflow: hidden;
+}
+
+.activity-box img {
+  width: 100%;
+  max-width: 400px;
+  object-fit: cover;
+  height: auto;
+  flex: 1 1 300px;
+}
+
+.activity-text {
+  flex: 1 1 300px;
+  padding: 1rem 1.5rem;
+}
+
+.activity-text h4 {
+  margin-top: 0;
+  color: var(--green);
+}
+
+@media (max-width: 768px) {
+  .activity-box {
+    flex-direction: column;
+  }
+
+  .activity-box img,
+  .activity-text {
+    width: 100%;
+  }
+}
+
 /* Footer */
 footer {
   background-color: var(--blue);
