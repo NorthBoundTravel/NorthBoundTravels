@@ -28,62 +28,56 @@ header h1 {
   font-size: 2rem;
 }
 
-/* Navigation Bar */
+/* Navigation Container */
 nav {
   background-color: var(--blue);
   display: flex;
   justify-content: center;
-  align-items: center; /* Fix vertical alignment */
+  align-items: center;
   gap: 1rem;
   padding: 0.5rem 0;
 }
 
-/* Regular nav links */
-nav a {
+/* Ensure all nav items behave consistently */
+.nav-item {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+/* Link Styles */
+.nav-item a,
+.dropbtn {
   color: var(--white);
   text-decoration: none;
   font-weight: bold;
   padding: 0.5rem 1rem;
-  transition: background-color 0.2s;
-}
-
-nav a:hover {
-  color: var(--gold);
-}
-
-/* Dropdown container */
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-/* Dropdown button styled like links */
-.dropbtn {
-  background-color: transparent;
-  border: none;
-  color: var(--white);
-  font-weight: bold;
-  padding: 0.5rem 1rem;
-  cursor: pointer;
   font-size: 1rem;
-  transition: color 0.2s;
+  background: none;
+  border: none;
+  cursor: pointer;
+  line-height: 1;
+  display: flex;
+  align-items: center;
 }
 
+/* Hover Effects */
+.nav-item a:hover,
 .dropbtn:hover {
   color: var(--gold);
 }
 
-/* Dropdown content */
+/* Dropdown Menu */
 .dropdown-content {
   display: none;
   position: absolute;
-  background-color: var(--white);
-  min-width: 200px;
-  box-shadow: 0 8px 16px rgba(0,0,0,0.2);
-  z-index: 1;
-  border-radius: 4px;
   top: 100%;
   left: 0;
+  background-color: var(--white);
+  min-width: 200px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  border-radius: 4px;
 }
 
 .dropdown-content a {
@@ -97,7 +91,7 @@ nav a:hover {
   background-color: var(--gray);
 }
 
-/* Show dropdown on hover */
+/* Show on hover */
 .dropdown:hover .dropdown-content {
   display: block;
 }
